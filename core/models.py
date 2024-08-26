@@ -1,4 +1,5 @@
 from django.db import models
+#models according to the my uml diagram
 class task(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=1000)

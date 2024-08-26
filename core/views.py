@@ -4,9 +4,9 @@ from core.forms import *
 def home(request):
     return render(request,"home.html")
 def student_d(request):
-    form = addStudentForm()
+    form = addtask()
     if request.method =="post":
-        data=addStudentForm(request.POST)
+        data=addtask(request.POST)
         if data.is_valid():
             data.save()
             return redirect("home")

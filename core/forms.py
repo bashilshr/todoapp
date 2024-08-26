@@ -1,6 +1,6 @@
 from core.models import *
 from django import forms
-class addStudentForm(forms.ModelForm):
+class addtask(forms.ModelForm):
     class Meta:
-        model = student
+        model = task
         fields = '__all__'
