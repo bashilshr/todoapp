@@ -5,7 +5,7 @@ def home(request):
     return render(request,"home.html")
 def student_d(request):
     form = addtask()
-    if request.method =="post":
+    if request.method =="POST":
         data=addtask(request.POST)
         if data.is_valid():
             data.save()
