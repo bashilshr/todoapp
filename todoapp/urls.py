@@ -3,7 +3,6 @@ from django.urls import path
 from core.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home, name = "home") ,
-    path("student/",student,name='student'),
-    path('form/',student_d,name='dname'),
+    path('',tasklist.as_view(), name = "tasks"),
+    path('task<int:pk>',tasklist.as_view(), name = "tasks"),
 ]
