@@ -1,0 +1,19 @@
+<h1>My todo list</h1>
+<a href="{% url 'task-create' %}" Add your Task</a>
+<table>
+    <thead>
+        <tr>
+            <th> items</th>
+            <th></th>
+        </tr>
+    <tr>
+        {% for task in object_list %}
+    </tr>
+    <tr>
+        <td>{{ task.title }}</td>
+        <td><a href="{% url 'task' task.id %}">VIEW</a></td>
+    </tr>
+    {% empty %}
+        <h3>NO item</h3>
+    {% endfor %}
+</table>
