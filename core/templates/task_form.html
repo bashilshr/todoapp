@@ -1,6 +1,16 @@
-<h3>Task Forms</h3>
-<form action="" method="post">
-    {{ form.as_p }}
-    {% csrf_token %}
-    <input type="submit" value="submit">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+</head>
+<body>
+    <h1>Create Task</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

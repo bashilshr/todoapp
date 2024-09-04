@@ -17,5 +17,5 @@ class taskdetail (DetailView):
 class taskcreate (CreateView):
     model = task
     fields = '__all__'
-    success_url = reverse_lazy('task')
+    success_url = reverse_lazy('tasks')
     template_name = "task_form.html"
